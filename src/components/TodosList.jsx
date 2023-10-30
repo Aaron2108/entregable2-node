@@ -6,7 +6,7 @@ const TodosList = ({ toDos, getToDos, showSuccessNotf, showFailNotf, setIsLoadin
 
     const deleteToDo = id => {
         setIsLoading(true);
-        axios.delete(`https://todos-crud.fly.dev/api/v1/todos/${id}`)
+        axios.delete(`https://users-backend-dev-eaxb.3.us-1.fl0.io/users/${id}`)
             .then(() => {
                 getToDos();
                 showSuccessNotf("To do removed successfully");
@@ -26,8 +26,13 @@ const TodosList = ({ toDos, getToDos, showSuccessNotf, showFailNotf, setIsLoadin
                             key={toDo.id}
                         >
                             <div className="ms-2 me-auto">
-                                <div className="fw-bold">{toDo.title}</div>
-                                {toDo.description}
+                                <div className="fw-bold">{toDo.first_name}</div>
+                                <ul>
+                                    <li>Last_name: <b>{toDo.last_name}</b></li>
+                                    <li>Email: <b>{toDo.email}</b></li>
+                                    <li>Password: <b>{toDo.password}</b></li>
+                                    <li>Birthday: <b>{toDo.birthday}</b></li>
+                                </ul>
                                 <div className="mt-2">
 
                                     <Button 

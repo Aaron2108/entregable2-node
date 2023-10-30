@@ -18,7 +18,7 @@ function App() {
   }, []);
   
   const getToDos = () => {
-    axios.get('https://todos-crud.fly.dev/api/v1/todos')
+    axios.get('https://users-backend-dev-eaxb.3.us-1.fl0.io/users')
       .then(res => setToDos(res.data))
       .finally(() => setIsLoading(false));
   }
@@ -44,7 +44,7 @@ function App() {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
-            To Do's
+            Users
           </Navbar.Brand>
         </Container>
       </Navbar>
